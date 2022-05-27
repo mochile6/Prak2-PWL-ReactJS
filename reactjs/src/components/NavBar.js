@@ -1,31 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./style";
 
 const NavBar = () => {
+  const classes = styles();
   return (
     <nav>
-      <header>
-        <table>
-          <td class="atas">
-            <img
-              class="logo"
-              src="https://pbs.twimg.com/profile_images/1107597594551681025/f_zyWZRZ_400x400.jpg"
-              alt="ITERA"
-            />
-          </td>
-          <td class="atass">Institut Teknologi Sumatera</td>
-        </table>
-      </header>
-
-      <ul>
-        <li>
-          <Link to="/home">Home</Link>
+      <ul className={classes.ul}>
+        <li className={classes.li}>
+          <Link className={classes.link} to="/home">
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/about">about</Link>
+        <li className={classes.li}>
+          <Link className={classes.link} to="/biodata">
+            Biodata
+          </Link>
         </li>
-        <li>
-          <Link to="/biodata">biodata</Link>
+        <li className={classes.li}>
+          <Link className={classes.link} to="/komentar">
+            komentar
+          </Link>
         </li>
       </ul>
     </nav>
